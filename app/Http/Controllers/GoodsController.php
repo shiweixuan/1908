@@ -19,6 +19,7 @@ class GoodsController extends Controller
      */
     public function index()
     {
+        echo 123;
         //设置
         // session(['name'=>'zhangyixing']);
         // request()->session()->save();
@@ -52,7 +53,7 @@ class GoodsController extends Controller
         // $res = Cache::get('res');
         // $res = cache('res_'.$page);
         $res=Redis::get('res_'.$page);
-        dump($res);
+        // dump($res);
         if(!$res){
             echo '走DB';
             $pageSize=config('app.pageSize');
